@@ -1,36 +1,35 @@
 /** @jsx jsx */
 import { css, jsx } from '@emotion/core';
-import span from './span.png';
+import todo from './todo.png';
+import countdown from './countdown.png';
+import ecommerce from './ecommerce.png';
+import randomColor from './color.png';
+import weather from './weather.png';
+
 export default function FooterContainer2() {
+  const cartTableStyle = css`
+    background-color: #fff !important;
+    border-radius: 10px;
+    @media (max-width: 450px) {
+      width: 100%;
+      margin: 1em auto;
+    }
+  `;
   const FooterContainer2Style = css`
     background-size: cover;
     background-repeat: no-repeat;
     background-position: top center;
-    background-color: #f9f9f9 !important;
-    box-sizing: border-box;
-    display: block;
-  `;
-  const FooterContainerOuterStyle = css`
-    padding-top: 4.0625rem;
-    padding-bottom: 4.0625rem;
-    @media (min-width: 768px) {
-      max-width: 720px;
+    background-color: #10a89a12 !important;
+    text-align: center;
+    @media (max-width: 450px) {
+      margin: 0 auto;
     }
-    width: 100%;
-    padding-right: 15px;
-    padding-left: 15px;
-    margin-right: auto;
-    margin-left: auto;
-    box-sizing: border-box;
-    display: block;
   `;
 
   const FooterContainerRowStyle = css`
-    position: relative;
     width: 100%;
     min-height: 1px;
-    padding-right: 15px;
-    padding-left: 15px;
+    padding: 15px;
     display: flex;
     flex-wrap: wrap;
     margin-right: -15px;
@@ -42,16 +41,11 @@ export default function FooterContainer2() {
     font-size: calc(1.375rem + (1vw - 3.75px) * 1.1268);
     line-height: calc(1.875rem + 6 * ((100vw - 21rem) / 680));
     font-weight: 700;
-    margin: 80px 0px 20px 0px;
+    margin: 1em auto;
     font-family: 'Poppins', Helvetica, Arial, sans-serif;
-    color: #000333;
+    color: #29541c;
     text-rendering: optimizeLegibility;
     box-sizing: border-box;
-    display: block;
-    margin-block-start: 0.83em;
-    margin-block-end: 0.83em;
-    margin-inline-start: 0px;
-    margin-inline-end: 0px;
   `;
 
   const footerPStyle = css`
@@ -70,31 +64,13 @@ export default function FooterContainer2() {
   `;
 
   const col6 = css`
-    position: relative;
-    width: 100%;
-    min-height: 1px;
-    padding-right: 15px;
+    width: 60%;
     padding-left: 15px;
-    box-sizing: border-box;
-    display: block;
-  `;
-
-  const h5Style = css`
-    font-size: 1.1rem;
-    font-family: 'Roboto', Helvetica, Arial, sans-serif;
-  `;
-
-  const buttonStyle = css`
-    display: flex !important;
-    border: 0.1rem solid transparent;
-    transition: all 0.2s ease-in-out;
-    box-sizing: border-box;
-    cursor: pointer;
-    padding-left: 0;
-    padding-right: 0;
-    white-space: inherit;
-    justify-content: space-between !important;
-    width: 100%;
+    margin: 0 auto;
+    @media (max-width: 450px) {
+      width: 85%;
+      margin: 0 auto;
+    }
   `;
 
   const cardHeaderStyle = css`
@@ -103,236 +79,186 @@ export default function FooterContainer2() {
     background-color: transparent;
     transition: 0.3s ease-in-out;
     margin-bottom: 0;
+    @media (max-width: 450px) {
+      padding: 0.5em;
+      margin: 0.5em auto;
+    }
+  `;
+
+  const projectImg = css`
+    width: 10em;
+    height: 6em;
+    margin: 1em auto;
+    box-shadow: 5px 8px 11px gray;
+    @media (max-width: 450px) {
+      width: 7em;
+      height: 5em;
+    }
+  `;
+
+  const h5Style = css`
+    font-size: 1.1rem;
+    margin: 1em auto;
+    padding-top: 2em;
+    color: #29541c;
+    font-family: 'Poppins', Helvetica, Arial, sans-serif;
+    @media (max-width: 450px) {
+      padding: 0.5em;
+      margin: 0.5em auto;
+      font-size: 0.9em;
+    }
   `;
 
   return (
     <div className="footerContainer2" css={FooterContainer2Style}>
-      <div className="footerContainer2-1" css={FooterContainerOuterStyle}>
-        <div className="footerContainerRow" css={FooterContainerRowStyle}>
+      <div className="footerContainerRow" css={FooterContainerRowStyle}>
+        <div
+          className="col-lg-8 text-center mx-auto"
+          css={css`
+            text-align: center !important;
+            margin-left: auto !important;
+            margin-right: auto !important;
+            position: relative;
+            width: 100%;
+            min-height: 1px;
+            padding-right: 15px;
+            padding-left: 15px;
+            box-sizing: border-box;
+            display: block;
+          `}
+        >
           <div
-            className="col-lg-8 text-center mx-auto"
+            className="mb-5"
             css={css`
-              text-align: center !important;
-              margin-left: auto !important;
-              margin-right: auto !important;
-              position: relative;
-              width: 100%;
-              min-height: 1px;
-              padding-right: 15px;
-              padding-left: 15px;
+              margin-bottom: 2rem !important;
               box-sizing: border-box;
               display: block;
             `}
           >
-            <div
-              className="mb-5"
-              css={css`
-                margin-bottom: 2rem !important;
-                box-sizing: border-box;
-                display: block;
-              `}
-            >
-              <h2 css={h2Style}>FAQs</h2>
-              <p className="lead mb-0" css={footerPStyle}>
-                We're at the beginning of an exciting journey and we understand
-                there may be lots of questions. We've included some of the most
-                popular below. For other questions, send us a message on live
-                chat.
-              </p>
-            </div>
+            <h2 css={h2Style}>My Projects</h2>
+            <p className="lead mb-0" css={footerPStyle}>
+              I'm at the beginning of this exciting development journey and i
+              understand there are lots of improvments. <br />
+              I've included some of my recently projects below.
+            </p>
           </div>
+        </div>
 
-          <div className="col-lg-6" css={col6}>
-            <div
-              className="mb-5"
-              css={css`
-                margin-bottom: 2rem !important;
-                box-sizing: border-box;
-                display: block;
-              `}
-            >
-              <div
-                className="card card-collapse mb-3 p-3 bg-white"
-                css={css`
-                  background-color: #fff !important;
-                `}
-              >
-                <div css={cardHeaderStyle} className="card-header">
-                  <h5 css={h5Style} className="mb-0">
-                    <button css={buttonStyle} className="btn">
-                      <h5
-                        css={css`
-                          font-size: 1.1rem;
-                          font-family: 'Roboto', Helvetica, Arial, sans-serif;
-                          margin-left: 15px;
-                        `}
-                      >
-                        When is the launch?
-                      </h5>
-
-                      <span className="card-collapse__btn-arrow">
-                        <img
-                          css={css`
-                            width: 16px;
-                            height: 14.22px;
-                            margin-right: 15px;
-                            margin-top: 2rem;
-                          `}
-                          src={span}
-                          alt="file"
-                          className="fa fa-arrow-down card-collapse__btn-arrow-inner"
-                        />
-                      </span>
-                    </button>
-                  </h5>
-                </div>
-                <div
-                  id="basicsCollapseTwo"
-                  className="collapse"
-                  aria-labelledby="basicsHeadingTwo"
-                  data-parent="#basicsAccordion1"
-                ></div>
-              </div>
-
-              <div
-                css={css`
-                  background-color: #fff !important;
-                `}
-                className="card card-collapse p-3 bg-white"
-              >
-                <div
-                  css={cardHeaderStyle}
-                  className="card-header card-collapse__header"
-                  id="basicsHeadingFour"
+        <div className="project-container" css={col6}>
+          <div
+            className="mb-5"
+            css={css`
+              margin-bottom: 2rem !important;
+              box-sizing: border-box;
+              display: block;
+            `}
+          >
+            <div className="card-table" css={cartTableStyle}>
+              <div css={cardHeaderStyle} className="card-header">
+                <h5 css={h5Style}>Next.js Ecommerce-page</h5>
+                <a
+                  href="https://next-js-ecommerces-store.herokuapp.com/content"
+                  target="_blank"
+                  rel="noopener noreferrer"
                 >
-                  <h5 css={h5Style} className="mb-0">
-                    <button css={buttonStyle} className="btn ">
-                      <h5
-                        css={css`
-                          font-size: 1.1rem;
-                          font-family: 'Roboto', Helvetica, Arial, sans-serif;
-                          margin-left: 15px;
-                        `}
-                      >
-                        Is Budibase open source?
-                      </h5>
-
-                      <span className="card-collapse__btn-arrow">
-                        <img
-                          css={css`
-                            width: 16px;
-                            height: 14.22px;
-                            margin-right: 15px;
-                            margin-top: 2rem;
-                          `}
-                          src={span}
-                          alt="file"
-                          className="fa fa-arrow-down card-collapse__btn-arrow-inner"
-                        />
-                      </span>
-                    </button>
-                  </h5>
-                </div>
-                <div
-                  id="basicsCollapseFour"
-                  className="collapse"
-                  aria-labelledby="basicsHeadingFour"
-                  data-parent="#basicsAccordion1"
-                ></div>
+                  <img css={projectImg} src={ecommerce} alt="todo project" />
+                </a>
               </div>
-
               <div
-                css={css`
-                  background-color: #fff !important;
-                `}
-                className="card card-collapse mb-3 p-3 bg-white"
-              >
-                <div
-                  css={cardHeaderStyle}
-                  className="card-header card-collapse__header"
-                  id="basicsHeadingOne"
-                >
-                  <h5 css={h5Style} className="mb-0">
-                    <button css={buttonStyle} className="btn">
-                      <h5
-                        css={css`
-                          font-size: 1.1rem;
-                          font-family: 'Roboto', Helvetica, Arial, sans-serif;
-                          margin-left: 15px;
-                        `}
-                      >
-                        Do I need to know how to code?
-                      </h5>
+                id="basicsCollapseTwo"
+                className="collapse"
+                aria-labelledby="basicsHeadingTwo"
+                data-parent="#basicsAccordion1"
+              ></div>
+            </div>
 
-                      <span className="card-collapse__btn-arrow">
-                        <img
-                          css={css`
-                            width: 16px;
-                            height: 14.22px;
-                            margin-right: 15px;
-                            margin-top: 2rem;
-                          `}
-                          src={span}
-                          alt="file"
-                          className="fa fa-arrow-down card-collapse__btn-arrow-inner"
-                        />
-                      </span>
-                    </button>
-                  </h5>
-                </div>
-                <div
-                  id="basicsCollapseOne"
-                  className="collapse"
-                  aria-labelledby="basicsHeadingOne"
-                  data-parent="#basicsAccordion2"
-                ></div>
+            <div className="card-table" css={cartTableStyle}>
+              <div
+                css={cardHeaderStyle}
+                className="card-header card-collapse__header"
+                id="basicsHeadingFour"
+              >
+                <h5 css={h5Style}>React weather app</h5>
+                <a
+                  href="https://codesandbox.io/s/github/xiaominzhu88/react-weather-app"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <img css={projectImg} src={weather} alt="todo project" />
+                </a>
               </div>
-
               <div
-                css={css`
-                  background-color: #fff !important;
-                `}
-                className="card card-collapse mb-3 p-3 bg-white"
+                id="basicsCollapseFour"
+                className="collapse"
+                aria-labelledby="basicsHeadingFour"
+                data-parent="#basicsAccordion1"
+              ></div>
+            </div>
+
+            <div className="card-table" css={cartTableStyle}>
+              <div
+                css={cardHeaderStyle}
+                className="card-header card-collapse__header"
+                id="basicsHeadingOne"
               >
-                <div
-                  css={cardHeaderStyle}
-                  className="card-header card-collapse__header"
-                  id="basicsHeadingThree"
+                <h5 css={h5Style}>React Random Color generator</h5>
+                <a
+                  href="https://nostalgic-roentgen-e8596b.netlify.app/"
+                  target="_blank"
+                  rel="noopener noreferrer"
                 >
-                  <div
-                    css={css`
-                      background-color: #fff !important;
-                    `}
-                    className="mb-0"
+                  <img css={projectImg} src={randomColor} alt="todo project" />
+                </a>
+              </div>
+              <div
+                id="basicsCollapseOne"
+                className="collapse"
+                aria-labelledby="basicsHeadingOne"
+                data-parent="#basicsAccordion2"
+              ></div>
+            </div>
+            <div className="card-table" css={cartTableStyle}>
+              <div
+                css={cardHeaderStyle}
+                className="card-header card-collapse__header"
+                id="basicsHeadingOne"
+              >
+                <h5 css={h5Style}>React Todo App</h5>
+                <a
+                  href="https://affectionate-heyrovsky-7618fd.netlify.app/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <img css={projectImg} src={todo} alt="todo project" />
+                </a>
+              </div>
+              <div
+                id="basicsCollapseOne"
+                className="collapse"
+                aria-labelledby="basicsHeadingOne"
+                data-parent="#basicsAccordion2"
+              ></div>
+            </div>
+
+            <div className="card-table" css={cartTableStyle}>
+              <div
+                css={cardHeaderStyle}
+                className="card-header card-collapse__header"
+                id="basicsHeadingThree"
+              >
+                <div className="card-table" css={cartTableStyle}>
+                  <h5 css={h5Style}>React countdown timer</h5>
+                  <a
+                    href="https://elastic-meninsky-ca3d1e.netlify.app/"
+                    target="_blank"
+                    rel="noopener noreferrer"
                   >
-                    <h5 css={h5Style} className="mb-0">
-                      <button css={buttonStyle} className="btn">
-                        <h5
-                          css={css`
-                            font-size: 1.1rem;
-                            font-family: 'Roboto', Helvetica, Arial, sans-serif;
-                            margin-left: 15px;
-                          `}
-                        >
-                          Can I build a website?
-                        </h5>
-
-                        <span className="card-collapse__btn-arrow">
-                          <img
-                            src={span}
-                            css={css`
-                              width: 16px;
-                              height: 14.22px;
-                              margin-right: 15px;
-                              margin-top: 2rem;
-                            `}
-                            alt="file"
-                            className="fa fa-arrow-down card-collapse__btn-arrow-inner"
-                          />
-                        </span>
-                      </button>
-                    </h5>
-                  </div>
+                    <img
+                      css={projectImg}
+                      src={countdown}
+                      alt="countdown project"
+                    />
+                  </a>
                 </div>
               </div>
             </div>
